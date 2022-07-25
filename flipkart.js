@@ -12,6 +12,7 @@ context('Test Flipkart', () => {
         cy.get('._2IX_2-').type("9717224363")
         cy.get('._3AWRsL').click()
         cy.get(':nth-child(2) > ._2IX_2-').type("abc")
+        cy.get(':nth-child(2) > ._2IX_2-').type("Neh@1211")
         cy.get('._1D1L_j > ._2KpZ6l').click()
 
 
@@ -22,19 +23,22 @@ context('Test Flipkart', () => {
         cy.get('.L0Z3Pu > svg').click()
     })
 
-    it.only('mouse event', function () {
-        cy.get('.LfkXVL').scrollIntoView({duration:2000})
-        cy.get('._37M3Pb').scrollIntoView({duration:1000})
+    it('mouse event', function () {
+        cy.get('.LfkXVL').scrollIntoView({ duration: 2000 })
+        cy.get('._37M3Pb').scrollIntoView({ duration: 1000 })
     })
-    
-    it('add to cart page', function(){
+
+    it('add to cart page', function () {
         cy.get('._3704LK').type("kurti")
         cy.get('.L0Z3Pu').click()
-        cy.get('[data-id="KTAGAPSMFGXJWXNB"] > ._1xHGtK > ._2B099V').click()
+        cy.get('[data-id="KTAGAHWEZYXDYHJN"]').click()
+        
+
 
     })
 
-/*     it('end to end functionality of buy product', function(){
-
-    }) */
+    it('end to end functionality of buy product', function () {
+        
+    })
 })
+
